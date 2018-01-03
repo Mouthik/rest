@@ -10,7 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class MathsController {
 
     @RequestMapping("/maths")
-    public Maths maths(@RequestParam(value="number") int number) {
-        return new Maths(number*2,2);
+    public Maths maths(@RequestParam(value = "number") int number,int multipliedBy) {
+        int answer = number * multipliedBy;
+        return new Maths(answer, multipliedBy);
     }
 }
