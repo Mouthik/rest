@@ -1,5 +1,7 @@
 package hello;
 
+import java.util.HashMap;
+
 public class IceCream {
     private int id;
     private String icecream;
@@ -7,12 +9,12 @@ public class IceCream {
         this.id=id;
         this.icecream=icecream;
     }
-
+    public int getId() {
+        return id;
+    }
     public String getIcecream() {
         return icecream;
     }
 
-    public int getId() {
-        return id;
-    }
+
 }
