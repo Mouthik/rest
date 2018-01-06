@@ -1,7 +1,10 @@
 package hello;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 
+@Component
 public class IceCreamData {
 
     public HashMap<Integer, String> getIcecreams() {
