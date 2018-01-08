@@ -1,20 +1,40 @@
 package hello;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashMap;
+@Entity
+@Table(name="icecream")
+public class IceCream implements Serializable {
+    private static final long serialVersionUID = -3009157732242241606L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-public class IceCream {
-    private int id;
-    private String icecream;
-    public IceCream(int id, String icecream){
+    @Column(name = "flavours")
+    private String flavours;
+
+    public IceCream(int id, String flavours){
         this.id=id;
-        this.icecream=icecream;
+        this.flavours=flavours;
     }
-    public int getId() {
+
+    public IceCream()
+    { }
+
+    public long getId() {
         return id;
     }
-    public String getIcecream() {
-        return icecream;
+
+    public String getFlavours() {
+        return flavours;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Icecream[id=%d, flavours='%s']", id, flavours);
+    }
+
 
 
 }
