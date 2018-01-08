@@ -18,7 +18,6 @@ public class IceCreamController {
     public IceCream iceCream(@RequestParam(value = "id") int id) {
 
         HashMap<Integer, String> ice = data.getIcecreams();
-
         if(ice.containsKey(id)){
             return new IceCream(id,ice.get(id));
         }
