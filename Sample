@@ -1,0 +1,112 @@
+POST - http://192.168.1.169:1006/api/leave
+GET - http://192.168.1.169:1006/api/leave
+GET - http://192.168.1.169:1006/api/leave/ID
+
+GET - http://192.168.1.169:1006/api/report/ID
+GET - http://192.168.1.169:1006/api/report
+POST - http://192.168.1.169:1006/api/report
+
+BOOK:
+
+BOOK NAME
+AUTHOR NAME
+JOURNER
+PRICE
+
+
+
+GET - http://192.168.1.169:1006/BOOK
+GET - http://192.168.1.169:1006/BOOK/ID
+
+
+POST - http://192.168.1.169:1006/BOOK
+
+
+{
+"name":"name",
+"author":"author",
+"journer":"journer",
+"price":"price"
+}
+
+
+DELETE - http://192.168.1.169:1006/BOOK/ID
+
+
+PUT - http://192.168.1.169:1006/BOOK/ID
+{
+"name":"name",
+"author":"author",
+"journer":"journer",
+"price":"price"
+}
+
+CAR:
+
+ID
+NAME
+OWNER
+COLOR
+TYPE
+
+GET - HTTP://192.168.1.169:1006/car
+GET - HTTP://192.168.1.169:1006/car/id
+
+POST - HTTP://192.168.1.169:1006/car
+
+{
+"id":"id",
+"name":"name",
+"owner":"owner",
+"color":"color",
+"type":"type",
+}
+
+DELETE - HTTP://192.168.1.169:1006/car/id
+
+PUT - HTTP://192.168.1.169:1006/car
+{
+"id":"id",
+"name":"name",
+"owner":"owner",
+"color":"color",
+"type":"type",
+
+}
+
+
+
+
+[6:52 PM, 1/18/2018] Peeps: GET - /car
+GET - /car/{id}
+
+POST - /car
+
+{
+"id":"id",
+"name":"name",
+"owner":"owner",
+"color":"color",
+"type":"type",
+}
+
+DELETE - /car/{id}
+
+PUT - /car
+{
+"id":"id",
+"name":"name",
+"owner":"owner",
+"color":"color",
+"type":"type",
+
+}
+[6:52 PM, 1/18/2018] Peeps: Never forget this
+[6:52 PM, 1/18/2018] Peeps: I won't remind u again
+
+
+
+
+
+
+
