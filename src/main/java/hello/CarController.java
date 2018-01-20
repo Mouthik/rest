@@ -1,6 +1,7 @@
 package hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +29,13 @@ public class CarController {
     }
     @RequestMapping(value="car/{id}",method=RequestMethod.DELETE)
     public ResponseEntity deletebyId(@PathVariable(value = "id")int id ) {
-        repository.delete((long)id);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        try {
+            repository.delete((long) id);
+            return ResponseEntity.status(HttpStatus.OK).build();
+        }catch (EmptyResultDataAccessException e){
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @RequestMapping(value="/car",method= RequestMethod.PUT)
